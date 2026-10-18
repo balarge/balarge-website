@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f3">
+  <meta name="description" content="Batman Anadolu Lisesi Araştırma ve Geliştirme Ekibi — Merak ediyor, araştırıyor ve geleceği birlikte inşa ediyoruz.">
+  <title>BAL AR-GE — Batman Anadolu Lisesi</title>
+  <link rel="icon" href="assets/logo/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <!-- Three.js 3D Sahne & Resmi STLLoader & Anime.js Animasyon Motoru -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script defer src="stl-data.js"></script>
+  <script defer src="script.js"></script>
+  <script defer src="explore.js"></script>
+  <script defer src="team-graph.js"></script>
+  <script defer src="scroll-3d.js"></script>
+</head>
+<body data-page="home">
+  <!-- Canlı 3D Altın Arı & Polen Tuvali (Tüm sayfada süzülür) -->
+  <canvas id="webgl-canvas" class="webgl-canvas" aria-hidden="true"></canvas>
+
+  <div id="site-header"></div>
+
+  <main>
+    <!-- 00. HERO (KAHRAMAN) BÖLÜMÜ -->
+    <section class="home-hero page-gutter" id="hero" aria-labelledby="home-title">
+      <div class="hero-glow"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <p class="eyebrow anime-item"><span class="eyebrow-mark"></span> BATMAN ANADOLU LİSESİ</p>
+        <h1 id="home-title" class="anime-item">Soruların<br><em>peşindeyiz.</em></h1>
+        <p class="hero-lede anime-item">Merak ettiğimiz konuları araştırıyor, fikirleri geleceğin proje ve bilim çalışmalarına dönüştürüyoruz.</p>
+        <div class="hero-actions anime-item">
+          <a class="button button-yellow" href="#hakkimizda">Ekibi Keşfet <span aria-hidden="true">↓</span></a>
+          <a class="quiet-link" href="#calismalar">Çalışmalara Bak <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-meta anime-item"><span class="meta-rule"></span><span>ARAŞTIRMA &amp; GELİŞTİRME EKİBİ</span></div>
+      </div>
+      <div class="hero-art anime-item" aria-label="BAL AR-GE logosu">
+        <div class="hero-logo-card">
+          <span class="logo-card-label">ARAŞTIRMA VE GELİŞTİRME EKİBİ</span>
+          <span class="svg-logo hero-svg-logo" role="img" aria-label="BAL AR-GE"></span>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#hakkimizda"><span></span> AŞAĞI İN</a>
+    </section>
+
+    <!-- 01. HAKKIMIZDA BÖLÜMÜ -->
+    <section class="home-intro section-pad" id="hakkimizda">
+      <div class="section-label"><span>01</span><i></i><span>HAKKIMIZDA &amp; EKİBİN AMACI</span></div>
+      <div class="intro-grid">
+        <div class="section-title-wrap">
+          <h2>Birlikte<br><em>üretmek.</em></h2>
+          <div class="intro-stats">
+            <div class="stat-box anime-card">
+              <strong>7</strong>
+              <span>Araştırmacı Öğrenci</span>
+            </div>
+            <div class="stat-box anime-card">
+              <strong>3+</strong>
+              <span>Aktif Proje Alanı</span>
+            </div>
+            <div class="stat-box anime-card">
+              <strong>1</strong>
+              <span>Ortak Kovan Hedefi</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <p class="lead">BAL AR-GE, Batman Anadolu Lisesi öğrencilerinin merak, inovasyon ve bilimsel proje üretimi için bir araya geldiği bağımsız bir öğrenci araştırma grubudur.</p>
+          <p>Okul ortamında yalnızca teorik bilgiyle yetinmeyip, "Neden?" ve "Nasıl?" sorularının peşinden gideriz. Fikir aşamasından prototipe kadar tüm mühendislik ve araştırma adımlarını takım ruhuyla yürütürüz.</p>
+          
+          <div class="value-grid mini-value-grid">
+            <article class="value-card anime-card">
+              <span class="value-card-no">01</span>
+              <h3>Bilimsel Araştırma</h3>
+              <p>Sorulara güvenilir akademik ve bilimsel literatürden yanıtlar arar, hipotezlerimizi deneylerle sınarız.</p>
+            </article>
+            <article class="value-card anime-card">
+              <span class="value-card-no">02</span>
+              <h3>Proje Geliştirme</h3>
+              <p>Algoritmalar, robotik sistemler ve 3D tasarımlar ile fikirleri uygulanabilir prototiplere dönüştürürüz.</p>
+            </article>
+            <article class="value-card anime-card">
+              <span class="value-card-no">03</span>
+              <h3>Açık Paylaşım</h3>
+              <p>Elde ettiğimiz her bulguyu, yazdığımız her satır kodu okul topluluğumuzla paylaşarak akran eğitimini destekleriz.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. ARININ VE LOGOMUZUN ANLAMI -->
+    <section class="bee-philosophy section-pad" id="felsefe">
+      <div class="section-label"><span>02</span><i></i><span>SİMGELER VE FELSEFE</span></div>
+      <div class="philosophy-header">
+        <div class="section-title-wrap">
+          <h2>Arının ve<br><em>logomuzun anlamı.</em></h2>
+        </div>
+        <p class="philosophy-lede">
+          Logomuzdaki arı ve altıgen hatlar estetik bir çizimden ibaret değildir; <strong>Batman Anadolu Lisesi</strong>'nin baş harflerini taşırken, aynı zamanda doğanın en kusursuz mühendislik disiplinini ve kovan aklını temsil eder.
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        <article class="philosophy-card anime-card">
+          <span class="phil-num">01</span>
+          <span class="phil-tag">KOLEKTİF AKIL</span>
+          <h3>Kovan Bilinci</h3>
+          <p>Tek bir arı tek başına ne bal yapabilir ne de petek örebilir. Bilimsel ilerleme ve inovasyon da bireysel bir gösteri değil; ortak akıl, sıkı iş birliği ve takım disipliniyle var olur.</p>
+        </article>
+
+        <article class="philosophy-card anime-card">
+          <span class="phil-num">02</span>
+          <span class="phil-tag">POLEN ETKİSİ</span>
+          <h3>Bilginin Tozlaşması</h3>
+          <p>Arılar çiçekten çiçeğe polen taşıyarak tüm ekosistemi besler ve canlandırır. Ekibimiz de edindiği her bilgiyi, okul duvarlarının ötesine taşıyarak topluma değer katacak bir polen gibi yaymayı hedefler.</p>
+        </article>
+
+        <article class="philosophy-card anime-card">
+          <span class="phil-num">03</span>
+          <span class="phil-tag">PETEK MİMARİSİ</span>
+          <h3>Logodaki Geometri</h3>
+          <p>Logomuzun kalbinde yer alan altıgen yapı, doğada en az malzeme ile en yüksek sağlamlığı ve hacmi sunan matematiksel bir harikadır. Projelerimizde ve sistemlerimizde bu yalınlığı örnek alırız.</p>
+        </article>
+      </div>
+
+      <div class="bee-quote-banner anime-card">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote>
+          Bilgi çiçeklerden toplanan nektardır; bilimsel araştırma ise onu geleceği besleyen bala dönüştürme sanatıdır.
+        </blockquote>
+        <cite>BAL AR-GE ÇALIŞMA MANİFESTOSU</cite>
+      </div>
+    </section>
+
+    <!-- 03. VİZYON VE MİSYON BÖLÜMÜ -->
+    <section class="vision-content section-pad" id="vizyon">
+      <div class="section-label"><span>03</span><i></i><span>HEDEFİMİZ VE YAKLAŞIMIMIZ</span></div>
+      <div class="explorer-head">
+        <h2>Vizyonumuz<br><em>ve misyonumuz.</em></h2>
+        <p>Araştırma ve proje çalışmalarımıza yön veren temel değerler ve geleceğe bakışımız.</p>
+      </div>
+      <div class="vision-copy-grid">
+        <article class="statement-card anime-card">
+          <span class="statement-no">V / 01</span>
+          <span class="statement-symbol">V</span>
+          <h2>Vizyonumuz</h2>
+          <p>Bilimsel merakı destekleyen, eleştirel düşünen, sorgulayan, araştıran ve katma değerli teknolojiler üreten lise öğrencilerinin yetişmesine öncülük etmek.</p>
+          <span class="statement-foot">UZUN VADELİ HEDEFİMİZ</span>
+        </article>
+        <article class="statement-card statement-yellow anime-card">
+          <span class="statement-no">M / 02</span>
+          <span class="statement-symbol">M</span>
+          <h2>Misyonumuz</h2>
+          <p>Öğrencilerin yaratıcı fikirlerini planlı araştırma ve mühendislik projeleriyle hayata geçirebilecekleri ilham verici bir ortam oluşturmak; kazanılan tecrübeleri paylaşmak.</p>
+          <span class="statement-foot">ÇALIŞMA YÖNTEMİMİZ</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04. KEŞFET (İNTERAKTİF KONU SEKMELERİ) BÖLÜMÜ -->
+    <section class="home-explorer section-pad" id="kesfet">
+      <div class="section-label"><span>04</span><i></i><span>İNTERAKTİF KEŞİF</span></div>
+      <div class="explorer-head">
+        <h2>Ekibi<br><em>keşfet.</em></h2>
+        <p>BAL AR-GE’nin çalışma alanlarını, odak noktalarını ve metodolojisini konulara tıklayarak ayrıntılı biçimde inceleyin.</p>
+      </div>
+      <div class="explorer">
+        <div class="explorer-tabs" id="explorer-tabs" role="tablist" aria-label="Konular"></div>
+        <article class="explorer-panel" id="explorer-panel" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <!-- 05. EKİBİMİZ (3D BAL PETEĞİ ROSTER) BÖLÜMÜ -->
+    <section class="team-content section-pad" id="ekibimiz">
+      <div class="section-label"><span>05</span><i></i><span>EKİBİMİZ &amp; 3D PETEK</span></div>
+      <div class="content-columns">
+        <div>
+          <h2>Ekibin<br><em>üyeleri.</em></h2>
+          <div class="team-quick-tags">
+            <span>#Araştırma</span>
+            <span>#Tasarım</span>
+            <span>#Yazılım</span>
+            <span>#Mühendislik</span>
+          </div>
+        </div>
+        <div class="body-copy">
+          <p class="lead">BAL AR-GE’yi oluşturan, merakını ve emeğini ortaya koyan öğrenciler.</p>
+          <p>Aşağıdaki 3D altın petek üzerindeki altıgenlere tıklayarak veya fareyle sürükleyip döndürerek ekip üyelerini tanıyabilirsiniz.</p>
+        </div>
+      </div>
+      <!-- 3D İnteraktif Altın Bal Peteği Sahnesi -->
+      <div class="team-graph" id="team-graph" tabindex="0">
+        <canvas aria-hidden="true"></canvas>
+        <div class="graph-hint">DÖNDÜR · SEÇ · DOKUN</div>
+      </div>
+      <!-- Üye Listesi -->
+      <ul class="team-roster" id="team-roster" aria-label="Ekip listesi"></ul>
+    </section>
+
+    <!-- 06. NELER YAPTIK? (ÇALIŞMA ARŞİVİ) BÖLÜMÜ -->
+    <section class="projects-content section-pad" id="calismalar">
+      <div class="section-label"><span>06</span><i></i><span>ÇALIŞMA ARŞİVİ &amp; ETKİNLİKLER</span></div>
+      <div class="content-columns">
+        <h2>Projeler ve<br><em>etkinlikler.</em></h2>
+        <div class="body-copy">
+          <p class="lead">Ekibin araştırma, geliştirme ve bilimsel etkinlik kayıtları bu galeride toplanır.</p>
+          <p>Her çalışma, öğrencilerin merakından başlayıp somut bir rapor ve prototipe dönüşme serüvenini yansıtır.</p>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure class="shot s1 anime-shot">
+          <div class="shot-art"><i></i><b>01</b></div>
+          <figcaption><strong>Bilimsel Araştırma Metodolojisi</strong><span>Hipotez kurma ve literatür taraması atölyesi</span></figcaption>
+        </figure>
+        <figure class="shot s2 anime-shot">
+          <div class="shot-art"><i></i><b>02</b></div>
+          <figcaption><strong>Prototip Tasarımı &amp; 3D Modelleme</strong><span>Mekanik parçaların sanal modellemesi ve üretimi</span></figcaption>
+        </figure>
+        <figure class="shot s3 anime-shot">
+          <div class="shot-art"><i></i><b>03</b></div>
+          <figcaption><strong>Veri Analizi &amp; Kodlama</strong><span>Deneysel verilerin algoritmik sınıflandırılması</span></figcaption>
+        </figure>
+        <figure class="shot s4 anime-shot">
+          <div class="shot-art"><i></i><b>04</b></div>
+          <figcaption><strong>Robotik &amp; Donanım Çalışmaları</strong><span>Mikrodenetleyici tabanlı otonom sensör kartı</span></figcaption>
+        </figure>
+        <figure class="shot s5 anime-shot">
+          <div class="shot-art"><i></i><b>05</b></div>
+          <figcaption><strong>Okul İçi Bilim Seminerleri</strong><span>Öğrenilen bulguların sunumu ve akran eğitimi</span></figcaption>
+        </figure>
+        <figure class="shot s6 anime-shot">
+          <div class="shot-art"><i></i><b>06</b></div>
+          <figcaption><strong>Teknoloji &amp; Yarışma Hazırlıkları</strong><span>Ulusal ve bölgesel yarışmalar için proje geliştirme</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 07. İLETİŞİM (BİZE ULAŞIN) BÖLÜMÜ -->
+    <section class="contact-content section-pad" id="iletisim">
+      <div class="section-label"><span>07</span><i></i><span>İLETİŞİM &amp; İŞ BİRLİĞİ</span></div>
+      <div class="contact-layout">
+        <div>
+          <h2>Bize<br><em>ulaşın.</em></h2>
+          <p class="contact-lead">Proje fikirleriniz, lise düzeyinde bilimsel araştırma önerileriniz veya ortak çalışma talepleriniz için doğrudan bize yazabilirsiniz.</p>
+          <a class="mail-link" href="mailto:example@example.com">
+            <span>example@example.com</span><b aria-hidden="true">↗</b>
+          </a>
+        </div>
+        <div class="contact-panel anime-card">
+          <span class="panel-label">BAL AR-GE / BATMAN ANADOLU LİSESİ</span>
+          <h3>Fikirlerini<br>bizimle paylaş.</h3>
+          <p>Yeni fikirler, merak edilen sorular ve iş birliği teklifleri için kapımız her zaman açık.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
