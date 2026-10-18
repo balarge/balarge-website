@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo/logo-light.svg">
+    <img src="assets/logo/logo.svg" alt="BAL AR-GE Logosu" width="260">
+  </picture>
+</p>
+
 # BAL AR-GE
 
 **Batman Anadolu Lisesi Araştırma ve Geliştirme Ekibi**
@@ -76,4 +83,4 @@ Bu depo, BAL AR-GE tanıtım web sitesinin kaynak kodunu içerir. Site HTML, CSS
 
 ---
 
-Batman Anadolu Lisesi, Batman / Türkiye
+
